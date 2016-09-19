@@ -117,7 +117,7 @@ selected_data <- selected_data[c(2,69,3:68)]
 
 melt_data<-melt(selected_data, id.vars=c("Activity_Name","Subject"))
 cast_data<-dcast(melt_data, Activity_Name + Subject ~ variable, mean)
-write.table(cast_data, file="output_data.txt")
+write.table(cast_data, file="output_data.txt", row.name=FALSE)
 
 ##############################################################################
 # Step 6 End
